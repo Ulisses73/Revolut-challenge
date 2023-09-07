@@ -33,7 +33,7 @@ Amazon CloudWatch: Monitor and log application and server metrics for performanc
 
 ## Scripts for building and no-downtime production:
 
-### Inside of Scripts folder:
+### Scripts:
 
 setup.sh - set up the necessary environment variables, configurations, and dependencies.
 
