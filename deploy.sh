@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Activate the virtual environment
+# Virtual environment
 source venv/bin/activate
 
-# Pull the latest code changes from your repository
+# Pull the latest changes from repository
 git pull
 
-# Install any new Python dependencies
+# Install any new dependencies
 pip install -r requirements.txt
 
 # Gracefully restart the application server
