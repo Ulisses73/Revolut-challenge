@@ -42,6 +42,6 @@ deploy.sh - ensure zero-downtime deployments using blue-green deployment or roll
 ### Other SRE practices
 
 - Set up a CI/CD pipeline using a tool like Jenkins or GitLab CI/CD. It should include the following stages: build, test, deploy to staging, automated test in staging, manual test in staging and Production deployment.
-- Backup and restore scripts. Automate regular database backups to a secure location (for example using Amazon S3), for example using RDS settings, which could then be used to restore the database.
+- Backup and restore scripts. Automate regular database backups to a secure location (using Amazon S3), through RDS settings, which could then be used to restore the database.
 - Monitoring and Alerting: using tools like Prometheus, Grafana, or AWS CloudWatch to track system health and performance. Define alerting thresholds for key metrics.
 - High Availability Database: for production, using a managed high-availability database solution like Amazon RDS Multi-AZ.
