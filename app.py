@@ -4,7 +4,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-# Helper function to validate the date format
+# Function to validate the date format
 def is_valid_date(date_str):
     try:
         datetime.strptime(date_str, '%Y-%m-%d')
@@ -12,7 +12,7 @@ def is_valid_date(date_str):
     except ValueError:
         return False
 
-# SQLite database setup
+# SQLite database
 conn = sqlite3.connect('userdata.db')
 conn.execute('''
     CREATE TABLE IF NOT EXISTS users (
@@ -22,7 +22,7 @@ conn.execute('''
 ''')
 conn.close()
 
-# API endpoint to save/update user data
+# Endpoint to save or update user data
 @app.route('/hello/<username>', methods=['PUT'])
 def save_user_data(username):
     data = request.get_json()
@@ -51,7 +51,7 @@ def save_user_data(username):
     except Exception as e:
         return str(e), 500
 
-# API endpoint to get birthday message
+# Endpoint to get birthday message
 @app.route('/hello/<username>', methods=['GET'])
 def get_birthday_message(username):
     try:
